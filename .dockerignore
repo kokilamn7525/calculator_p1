@@ -1,0 +1,10 @@
+﻿.git
+.gitignore
+.dockerignore
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+mycal/
+.env
+.pytest_cache/
