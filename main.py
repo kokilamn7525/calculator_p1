@@ -24,6 +24,6 @@ def subtract_numbers(request: CalculationRequest):
     return {"result": request.a - request.b}
 
 
-@app.post("/multiply")
+@app.post("/multiplication")
 def multiply_numbers(request: CalculationRequest):
     return {"result": request.a * request.b}
