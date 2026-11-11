@@ -1,10 +1,10 @@
 ﻿from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="Addition API", version="1.0.0")
+app = FastAPI(title="Calculator API", version="1.0.0")
 
 
-class AdditionRequest(BaseModel):
+class CalculationRequest(BaseModel):
     a: float
     b: float
 
@@ -15,5 +15,10 @@ def health_check():
 
 
 @app.post("/add")
-def add_numbers(request: AdditionRequest):
+def add_numbers(request: CalculationRequest):
     return {"result": request.a + request.b}
+
+
+@app.post("/subtract")
+def subtract_numbers(request: CalculationRequest):
+    return {"result": request.a - request.b}
